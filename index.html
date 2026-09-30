@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Yayasan Mohd Jamhari & Siti Hadijah -- By RP Tech</title>
+
+  <!-- Mobile Chrome Fullscreen & Web App Capabilities -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#000000">
+
+  <!-- iOS Safari Compatibility (if ever viewed on iPhone) -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Inline Web App Manifest to launch in standalone mode -->
+  <link rel="manifest" href="data:application/manifest+json;utf8,{
+    %22name%22:%20%22SNS%20Agro%20Enterprise%22,
+    %22short_name%22:%20%22SNS%20Agro%22,
+    %22start_url%22:%20%22.%22,
+    %22display%22:%20%22standalone%22,
+    %22background_color%22:%20%22%23000000%22,
+    %22theme_color%22:%20%22%23000000%22
+  }">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      min-height: 100dvh; /* Adapts dynamically to mobile viewport address bar */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+      color: #fff;
+      font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .header img {
+      width: 250px;
+      height: 250px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+
+    .header h1 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .header h2 {
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: #ccc;
+    }
+
+    .header-actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .report-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    .report-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111;
+      border: 1px solid #222;
+      border-radius: 8px;
+      padding: 0.9rem 1.25rem;
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+
+    .report-item:hover {
+      background-color: #1a1a1a;
+      border-color: #333;
+    }
+
+    .title-link {
+      color: #e8e8e8;
+      font-size: 1.05rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .action-link {
+      color: #2e9e3f;
+      font-size: 0.95rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .action-link svg {
+      flex-shrink: 0;
+    }
+
+    .title-link:hover,
+    .action-link:hover {
+      text-decoration: underline;
+      filter: brightness(1.2);
+    }
+
+    /* Action Buttons */
+    .header-btn {
+      background: #1e1e1e;
+      border: 1px solid #333;
+      color: #aaa;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .header-btn:hover {
+      background: #282828;
+      color: #fff;
+    }
+
+    .header-btn:active {
+      background: #2a2a2a;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <header class="header">
+      <img src="yayasan.jpg" alt="Yayasan">
+      <h1>Yayasan Mohd Jamhari & Siti Hadijah</h1>
+      <h2>Financial Systen </h2>
+      <div class="header-actions">
+        <button class="header-btn" onclick="toggleFullScreen()">⛶ Fullscreen Mode</button>
+      </div>
+    </header>
+
+    <section class="report-list">
+      <div class="report-item">
+        <a class="title-link" href="https://docs.google.com/forms/d/e/1FAIpQLSevLqIz4s7Sgyr00FPu9btoVT9WFBdy855wl3tMYdKKNeru9g/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Data Entry</a>
+        <a class="action-link" href="https://docs.google.com/forms/d/e/1FAIpQLSevLqIz4s7Sgyr00FPu9btoVT9WFBdy855wl3tMYdKKNeru9g/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Click to Open</a>
+      </div>
+
+      <div class="report-item">
+        <a class="title-link" href="https://docs.google.com/spreadsheets/d/1a3vvt9FOqqP2ooMIgKLtL0xyrB2UGXrCpnyyM7XKVz8/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Financial Dashboard</a>
+        <a class="action-link" href="https://docs.google.com/spreadsheets/d/1a3vvt9FOqqP2ooMIgKLtL0xyrB2UGXrCpnyyM7XKVz8/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Click to Open</a>
+      </div>
+
+    </section>
+  </main>
+
+  <script>
+    function toggleFullScreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => {
+          console.warn("Fullscreen request was rejected: ", err);
+        });
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    }
+  </script>
+</body>
+</html>
